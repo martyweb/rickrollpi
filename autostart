@@ -1,0 +1,5 @@
+@bash /home/pi/Desktop/rick.sh
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@bash /home/pi/Desktop/rick.sh
