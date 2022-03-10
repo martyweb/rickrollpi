@@ -9,10 +9,15 @@ https://aiyprojects.withgoogle.com/voice-v1/
 
 2. SSH into Pi 
 
-3. Clone repo
+3. Clone this repo
 ```
 git clone https://github.com/martyweb/rickrollpi.git
 cd rickrollpi
+chmod +x rick.*
+```
+3a. Test the script
+```
+./rick.sh
 ```
 
 4. Setup autostart
