@@ -17,6 +17,13 @@ import argparse
 import time
 import threading
 
+from pathlib import Path
+import sys
+#path_root = Path(__file__).parents[2]
+path = '/home/pi/AIY-projects-python/src/aiy/'
+sys.path.append(str(path))
+#print(sys.path)
+
 from aiy.board import Board
 from aiy.voice.audio import AudioFormat, play_wav, record_file, Recorder
 

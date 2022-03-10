@@ -7,10 +7,13 @@ THis project is using AIY google kit: https://aiyprojects.withgoogle.com/voice-v
 
 https://aiyprojects.withgoogle.com/voice-v1/
 
-2. Setup rickroll software 
-    Aquire a rickroll.wav file
-3. Clone repo
+2. SSH into Pi 
 
+3. Clone repo
+```
+git clone https://github.com/martyweb/rickrollpi.git
+cd rickrollpi
+```
 
 4. Setup autostart
 4a. Raspiconfig
@@ -21,4 +24,5 @@ Select this option: System Options -> Boot / Auto Login -> Desktop Auto Login
 Run: 
 ```nano /home/pi/.config/lxsession/LXDE-pi/autostart```
 
-Add line: @bash /home/pi/Desktop/rick.sh
+Add line: 
+```@bash /home/pi/rickroll/rick.sh```
