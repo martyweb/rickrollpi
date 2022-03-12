@@ -26,11 +26,22 @@ sys.path.append(str(path))
 
 from aiy.board import Board
 from aiy.voice.audio import AudioFormat, play_wav, record_file, Recorder
+from gpiozero import LED
+from time import sleep
 
 def main():
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--filename', '-f', default='recording.wav')
     args = parser.parse_args()
+
+    led = LED(25)
+    #while True:
+    led.on()
+        #sleep(1)
+        #led.off()
+        #sleep(1)
+
 
     with Board() as board:
 
@@ -39,7 +50,7 @@ def main():
             board.button.wait_for_press()
 
             print('Playing...')
-            play_wav('rickrollshort.wav')
+            play_wav('DJAirhorn.wav')
             print('Done.')
 
 if __name__ == '__main__':
