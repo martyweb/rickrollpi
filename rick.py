@@ -16,8 +16,9 @@
 import argparse
 import time
 import threading
+import os
 
-from pathlib import Path
+#from pathlib import Path
 import sys
 #path_root = Path(__file__).parents[2]
 path = '/home/pi/AIY-projects-python/src/aiy/'
@@ -39,7 +40,7 @@ def main():
     led = LED(25)
     led.on()
 
-    if not isfile(filename):
+    if not os.path.isfile(filename):
         print(f'{filename} not found')
         exit()
 
