@@ -32,16 +32,16 @@ from time import sleep
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--filename', '-f', default='recording.wav')
+    parser.add_argument('--filename', '-f', default='DJAirhorn.wav')
     args = parser.parse_args()
+    filename=args.filename
 
     led = LED(25)
-    #while True:
     led.on()
-        #sleep(1)
-        #led.off()
-        #sleep(1)
 
+    if not isfile(filename):
+        print(f'{filename} not found')
+        exit()
 
     with Board() as board:
 
@@ -50,8 +50,10 @@ def main():
             board.button.wait_for_press()
 
             print('Playing...')
-            play_wav('DJAirhorn.wav')
-            print('Done.')
+            led.off()
+            play_wav(filename)
+            print('Done playing')
+            led.on()
 
 if __name__ == '__main__':
     main()
