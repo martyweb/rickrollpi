@@ -1,2 +1,2 @@
 cd /home/pi/rickrollpi
-./rick.py
+./rick.py -f rickrollshort.wav
