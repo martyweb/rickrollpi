@@ -22,10 +22,12 @@ import os
 import sys
 #path_root = Path(__file__).parents[2]
 path = '/home/pi/AIY-projects-python/src/aiy/'
+
 if os.path.isdir(path):
     sys.path.append(str(path))
 else:
     print('Warning: did not find AIY source directory')
+#print(sys.path)
 
 from aiy.board import Board
 from aiy.voice.audio import AudioFormat, play_wav, record_file, Recorder
